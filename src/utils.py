@@ -1,6 +1,8 @@
 import pandas as pd
 import json
 
+import matplotlib.pyplot as plt
+
 def json_to_pd(json_file):
     """
     extract data from json file and convert to pandas dataframe
@@ -39,29 +41,63 @@ def epoch_to_datetime(epoch_time):
 
 import plotly.express as px
 
-def plot_time_series(df):
+def plot_time_series(df,matplotlib = False,first = True):
     """
-    Plot time series of people count
+    Plot time series of people count, plot png if matplotlib = True
     :param df: pandas dataframe
+    :param matplotlib: boolean, if True plot png, else plot html
+    :param first: boolean, if True, it is the first time to plot, else not
     :return: None
     """
-    df['time'] = pd.to_datetime(df['time'])
-    fig = px.line(df, x='time', y='peoplecount_rgb', title='Time Series of People Count')
-    fig.show()
+    if first:
+        df['time'] = pd.to_datetime(df['time'])
+        
+    if matplotlib :
+        # use matplotlib to plot
+        fig, ax = plt.subplots()  # Create a figure and axes object
+        ax.plot(df['time'], df['peoplecount_rgb'])
+        ax.set(xlabel='time', ylabel='peoplecount_rgb', title='Time Series of People Count')
+        ax.grid()
+        fig.savefig("./images/time_series.png")  # Save the figure instead of the axes
+        plt.show()
+        
+    else:
+        fig = px.line(df, x='time', y='peoplecount_rgb', title='Time Series of People Count')
+        fig.show()
+        
+        
+        
     
-def plot_time_series_dbd(df):
+def plot_time_series_dbd(df,matplotlib = False, first = True):
     """
-    Plot time series of people count day by day, every day in a new graph
+    Plot time series of people count, plot png if matplotlib = True
     :param df: pandas dataframe
+    :param matplotlib: boolean, if True plot png, else plot html
+    :param first: boolean, if True, it is the first time to plot, else not
     :return: None
     """
-    df['time'] = pd.to_datetime(df['time'])
-    df['date'] = df['time'].dt.date
+    if first:
+        df['time'] = pd.to_datetime(df['time'])
+        df['date'] = df['time'].dt.date
+        
     dates = df['date'].unique()
+    
     for date in dates:
         df_date = df[df['date'] == date]
-        fig = px.line(df_date, x='time', y='peoplecount_rgb', title='Time Series of People Count (Date: {})'.format(date))
-        fig.show()
+        
+        if matplotlib :
+            # use matplotlib to plot
+            fig, ax = plt.subplots()  # Create a figure and axes object
+            ax.plot(df_date['time'], df_date['peoplecount_rgb'])
+            ax.set(xlabel='time', ylabel='peoplecount_rgb', title='Time Series of People Count')
+            ax.grid()
+            # name the file with date as 'yyyy-mm-dd.png'
+            fig.savefig("./images/"+str(date)+".png")  # Save the figure instead of the axes
+            plt.show()
+            
+        else:
+            fig = px.line(df_date, x='time', y='peoplecount_rgb', title='Time Series of People Count')
+            fig.show()
 
 
     

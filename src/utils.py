@@ -41,44 +41,47 @@ def epoch_to_datetime(epoch_time):
 
 import plotly.express as px
 
-def plot_time_series(df,matplotlib = False,first = True):
+def plot_time_series(df,y,title,matplotlib = False,first = True):
     """
     Plot time series of people count, plot png if matplotlib = True
     :param df: pandas dataframe
+    :param y : string, name of the column to plot
     :param matplotlib: boolean, if True plot png, else plot html
     :param first: boolean, if True, it is the first time to plot, else not
     :return: None
     """
     if first:
-        df['time'] = pd.to_datetime(df['time'])
+        # use .loc to apply pd.to_datetime to the column 'time'
+        df.loc[:,'time'] = pd.to_datetime(df['time']) 
         
     if matplotlib :
         # use matplotlib to plot
         fig, ax = plt.subplots()  # Create a figure and axes object
-        ax.plot(df['time'], df['peoplecount_rgb'])
-        ax.set(xlabel='time', ylabel='peoplecount_rgb', title='Time Series of People Count')
+        ax.plot(df['time'], df[y])
+        ax.set(xlabel='time', ylabel=y, title='Time Series of '+title)
         ax.grid()
         fig.savefig("./images/time_series.png")  # Save the figure instead of the axes
         plt.show()
         
     else:
-        fig = px.line(df, x='time', y='peoplecount_rgb', title='Time Series of People Count')
+        fig = px.line(df, x='time', y=y, title='Time Series of '+title)
         fig.show()
         
         
         
     
-def plot_time_series_dbd(df,matplotlib = False, first = True):
+def plot_time_series_dbd(df,y, title,matplotlib = False, first = True,):
     """
     Plot time series of people count, plot png if matplotlib = True
     :param df: pandas dataframe
+    :param y : string, name of the column to plot
     :param matplotlib: boolean, if True plot png, else plot html
     :param first: boolean, if True, it is the first time to plot, else not
     :return: None
     """
     if first:
-        df['time'] = pd.to_datetime(df['time'])
-        df['date'] = df['time'].dt.date
+        df.loc[:,'time'] = pd.to_datetime(df['time'])
+        df.loc[:,'date'] = df['time'].dt.date
         
     dates = df['date'].unique()
     
@@ -88,16 +91,16 @@ def plot_time_series_dbd(df,matplotlib = False, first = True):
         if matplotlib :
             # use matplotlib to plot
             fig, ax = plt.subplots()  # Create a figure and axes object
-            ax.plot(df_date['time'], df_date['peoplecount_rgb'])
-            ax.set(xlabel='time', ylabel='peoplecount_rgb', title='Time Series of People Count')
+            ax.plot(df_date['time'], df_date[y])
+            ax.set(xlabel='time', ylabel=y, title='Time Series of '+title)
             ax.grid()
             # name the file with date as 'yyyy-mm-dd.png'
             fig.savefig("./images/"+str(date)+".png")  # Save the figure instead of the axes
             plt.show()
             
         else:
-            fig = px.line(df_date, x='time', y='peoplecount_rgb', title='Time Series of People Count')
+            fig = px.line(df_date, x='time', y= y, title='Time Series of '+title)
             fig.show()
-
+            
 
     

@@ -27,7 +27,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/AymaneElmahi/sd-hoc">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo_written.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Implementation Of SD-HOC Algorithm </h3>
@@ -83,7 +83,7 @@ To achieve precise people count predictions, this implementation combines machin
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Built With 
+### Built With
 
 <!-- python, jupyter, tensorflow, pandas -->
 
@@ -91,7 +91,6 @@ To achieve precise people count predictions, this implementation combines machin
 [![Jupyter](https://img.shields.io/badge/jupyter-6.1.4-orange)](https://jupyter.org/)  
 [![Tensorflow](https://img.shields.io/badge/tensorflow-2.4.0-red)](https://www.tensorflow.org/)  
 [![Pandas](https://img.shields.io/badge/pandas-1.2.0-yellow)](https://pandas.pydata.org/)
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -104,28 +103,17 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+To install all the required libraries for this project, run the following command:
 
-- npm
-  ```sh
-  npm install npm@latest -g
-  ```
+```sh
+pip install -r requirements.txt
+```
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/AymaneElmahi/sd-hoc.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = "ENTER YOUR API";
-   ```
+```sh
+git clone https://github.com/AymaneElmahi/sd-hoc.git
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -133,22 +121,24 @@ This is an example of how to list things you need to use the software and how to
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+This project may be useful for anyone looking to implement the SD-HOC algorithm for occupancy estimation in their own applications. The algorithm's non-intrusive approach makes it suitable for various applications in facilities management and smart building systems.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more details about the algorithm in itself, please refer to the [paper](https://github.com/cruiseresearchgroup/SD-HOC-Seasonal-Decomposition-Algorithm-for-Mining-Lagged-Time-Series/blob/master/paper/AusDM2017_IrvanAriefAng_(CCIS).pdf)\_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ROADMAP -->
 
-## Roadmap
+## The code is divided into 2 main parts:
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-  - [ ] Nested Feature
+1. `Data Visualization` : This part is dedicated to the visualization of the data, and the analysis of the different features.
 
-See the [open issues](https://github.com/AymaneElmahi/sd-hoc/issues) for a full list of proposed features (and known issues).
+2. `Algorithm Implementation` : This part is dedicated to the implementation of the SD-HOC algorithm, and the training of the machine learning models.
+
+I have to note that I didn't go through the whole implementation of the algorithm, as I only implemented the parts that I found relevant to my project. I also added some of my own ideas to the algorithm, such as the use of a KNN classifier to predict the occupancy of the room at a given time.
+Here is the flowchart of the algorithm I implemented:
+
+![Flowchart][flowchart]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -181,21 +171,19 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/AymaneElmahi/sd-hoc](https://github.com/AymaneElmahi/sd-hoc)
+Aymane EL MAHI : [Message me on LinkedIn](https://www.linkedin.com/in/aymane-elmahi)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
 
-## Acknowledgments
+<!-- ## Acknowledgments
 
 - []()
 - []()
-- []()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- []() -->
+<!--
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -213,6 +201,7 @@ Project Link: [https://github.com/AymaneElmahi/sd-hoc](https://github.com/Aymane
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/aymane-elmahi
 [product-screenshot]: images/about_the_project_screenshot.png
+[Flowchart]: images/flowchart.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB

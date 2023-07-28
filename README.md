@@ -24,11 +24,11 @@
 [![Paper](https://img.shields.io/badge/paper-here-svg)](<https://github.com/cruiseresearchgroup/SD-HOC-Seasonal-Decomposition-Algorithm-for-Mining-Lagged-Time-Series/blob/master/paper/AusDM2017_IrvanAriefAng_(CCIS).pdf>)
 
 <!-- PROJECT LOGO -->
-<br />
+<!-- <br />
 <div align="center">
   <a href="https://github.com/AymaneElmahi/sd-hoc">
     <img src="images/logo_written.png" alt="Logo" width="80" height="80">
-  </a>
+  </a> -->
 
 <h3 align="center">Implementation Of SD-HOC Algorithm </h3>
 

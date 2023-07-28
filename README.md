@@ -19,33 +19,29 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Author](https://img.shields.io/badge/author-@AymaneElmahi-blue)](https://github.com/AymaneElmahi)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Paper](https://img.shields.io/badge/paper-here-svg)](<https://github.com/cruiseresearchgroup/SD-HOC-Seasonal-Decomposition-Algorithm-for-Mining-Lagged-Time-Series/blob/master/paper/AusDM2017_IrvanAriefAng_(CCIS).pdf>)
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/AymaneElmahi/sd-hoc">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Implementation Of SD-HOC Algorithm </h3>
 
   <p align="center">
-    project_description
+    This project implements the SD-HOC algorithm for predicting the people count in a room solely using CO2 data, utilizing machine learning and time series techniques for accurate real-time occupancy estimation and efficient spatial management. The algorithm's non-intrusive approach makes it suitable for various applications in facilities management and smart building systems.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/AymaneElmahi/sd-hoc"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <!-- <a href="https://github.com/AymaneElmahi/sd-hoc">View Demo</a> -->
+    <a href="https://github.com/AymaneElmahi/sd-hoc/issues">Report Bug</a>
+    <!-- ·
+    <a href="https://github.com/AymaneElmahi/sd-hoc/issues">Request Feature</a> -->
   </p>
 </div>
 
@@ -79,22 +75,23 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![Product Name Screen Shot][product-screenshot]
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+This project is an implementation of the SD-HOC (Seasonal Decomposition Algorithm for Mining Lagged Time Series) algorithm, designed to accurately predict the people count in a room using solely the CO2 data obtained from that very room. The SD-HOC algorithm leverages the relationship between human presence and CO2 levels, utilizing the principle that as humans occupy an enclosed space, they release carbon dioxide through respiration, leading to a discernible increase in CO2 concentration.
+
+To achieve precise people count predictions, this implementation combines machine learning and time series techniques. Machine learning models are employed to learn complex patterns and dependencies present in the CO2 data, allowing for robust predictions even in dynamic environments.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Built With
+### Built With 
 
-- [![Next][Next.js]][Next-url]
-- [![React][React.js]][React-url]
-- [![Vue][Vue.js]][Vue-url]
-- [![Angular][Angular.io]][Angular-url]
-- [![Svelte][Svelte.dev]][Svelte-url]
-- [![Laravel][Laravel.com]][Laravel-url]
-- [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-- [![JQuery][JQuery.com]][JQuery-url]
+<!-- python, jupyter, tensorflow, pandas -->
+
+[![Python](https://img.shields.io/badge/python-3.9.0-blue)](https://www.python.org/downloads/release/python-390/)  
+[![Jupyter](https://img.shields.io/badge/jupyter-6.1.4-orange)](https://jupyter.org/)  
+[![Tensorflow](https://img.shields.io/badge/tensorflow-2.4.0-red)](https://www.tensorflow.org/)  
+[![Pandas](https://img.shields.io/badge/pandas-1.2.0-yellow)](https://pandas.pydata.org/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,7 +116,7 @@ This is an example of how to list things you need to use the software and how to
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/AymaneElmahi/sd-hoc.git
    ```
 3. Install NPM packages
    ```sh
@@ -151,7 +148,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Feature 3
   - [ ] Nested Feature
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/AymaneElmahi/sd-hoc/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -186,7 +183,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/AymaneElmahi/sd-hoc](https://github.com/AymaneElmahi/sd-hoc)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -203,19 +200,19 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/AymaneElmahi/sd-hoc.svg?style=for-the-badge
+[contributors-url]: https://github.com/AymaneElmahi/sd-hoc/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/AymaneElmahi/sd-hoc.svg?style=for-the-badge
+[forks-url]: https://github.com/AymaneElmahi/sd-hoc/network/members
+[stars-shield]: https://img.shields.io/github/stars/AymaneElmahi/sd-hoc.svg?style=for-the-badge
+[stars-url]: https://github.com/AymaneElmahi/sd-hoc/stargazers
+[issues-shield]: https://img.shields.io/github/issues/AymaneElmahi/sd-hoc.svg?style=for-the-badge
+[issues-url]: https://github.com/AymaneElmahi/sd-hoc/issues
+[license-shield]: https://img.shields.io/github/license/AymaneElmahi/sd-hoc.svg?style=for-the-badge
+[license-url]: https://github.com/AymaneElmahi/sd-hoc/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
+[linkedin-url]: https://linkedin.com/in/aymane-elmahi
+[product-screenshot]: images/about_the_project_screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB

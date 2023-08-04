@@ -98,9 +98,6 @@ To achieve precise people count predictions, this implementation combines machin
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
 To install all the required libraries for this project, run the following command:
@@ -123,7 +120,7 @@ git clone https://github.com/AymaneElmahi/sd-hoc.git
 
 This project may be useful for anyone looking to implement the SD-HOC algorithm for occupancy estimation in their own applications. The algorithm's non-intrusive approach makes it suitable for various applications in facilities management and smart building systems.
 
-_For more details about the algorithm in itself, please refer to the [paper](https://github.com/cruiseresearchgroup/SD-HOC-Seasonal-Decomposition-Algorithm-for-Mining-Lagged-Time-Series/blob/master/paper/AusDM2017_IrvanAriefAng_(CCIS).pdf)_
+_For more details about the algorithm in itself, please refer to the [paper](https://github.com/cruiseresearchgroup/SD-HOC-Seasonal-Decomposition-Algorithm-for-Mining-Lagged-Time-Series/blob/master/paper/AusDM2017_IrvanAriefAng_(CCIS).pdf)\_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

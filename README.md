@@ -97,7 +97,6 @@ To achieve precise people count predictions, this implementation combines machin
 <!-- GETTING STARTED -->
 
 ## Getting Started
-
 ### Prerequisites
 
 To install all the required libraries for this project, run the following command:

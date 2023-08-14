@@ -133,14 +133,14 @@ _For more details about the algorithm in itself, please refer to the [paper](htt
 
 To run the project, you can run the `main.py` file in the `src` directory, it requires three arguments:
 
-- `--JSON_FILES` : The path to the json_files that contains the people count data. (Take a look at the function create_final_df in the file `utils.py` to see how the json files should be structured)
-- `--CO2_DATA` : The path to the co2_files that contains the CO2 data. (Take a look at the function create_final_df in the file `utils.py` to see how the co2 files should be structured)
-- `--COMMAND` : The command to run, it can be either `train` or `run`.
+- `JSON_FILES` : The path to the json_files that contains the people count data. (Take a look at the function create_final_df in the file `utils.py` to see how the json files should be structured)
+- `CO2_DATA` : The path to the co2_file.csv that contains the CO2 data. (Take a look at the function create_final_df in the file `utils.py` to see how the co2 files should be structured)
+- `COMMAND` : The command to run, it can be either `train` or `run`.
 
 Here is an example of how to run the project:
 
 ```sh
-python src/main.py --JSON_FILES ./data/json_files --CO2_DATA ./data/co2_files --COMMAND train
+python src/main.py ./data/json_files ./data/co2_file.csv train
 ```
 > `Note`: This section needs more explanation on what type of data is expected, the name of the columns, etc...  
 > -------> You can take a look at the `utils.py` file to see how the data should be structured.

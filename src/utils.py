@@ -1,6 +1,8 @@
 """Module providingFunction printing python version."""
 
 import json
+import pickle
+import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -138,3 +140,24 @@ def create_final_df(json_files, df_co2):
     # transform the time column only to hours
     df_matched['time_hours'] = df_matched['time'].apply(lambda x: x.hour)
     return df_matched
+
+def save_model(model, model_name):
+    """
+    Save model to disk in a directory called 'models'
+    :param model: model to save
+    :param model_name: string, name of the model
+    :return: None
+    """
+    os.makedirs('models', exist_ok=True)
+    with open(os.path.join('models', model_name), 'wb') as file:
+        pickle.dump(model, file)
+
+def load_model(model_name):
+    """
+    Load model from directory called 'models'
+    :param model_name: string, name of the model
+    :return: model
+    """
+    with open(os.path.join('models', model_name), 'rb') as file:
+        model = pickle.load(file)
+    return model

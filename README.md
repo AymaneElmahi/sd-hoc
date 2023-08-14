@@ -87,16 +87,24 @@ To achieve precise people count predictions, this implementation combines machin
 
 <!-- python, jupyter, tensorflow, pandas -->
 
-[![Python](https://img.shields.io/badge/python-3.9.0-blue)](https://www.python.org/downloads/release/python-390/)  
+<!-- [![Python](https://img.shields.io/badge/python-3.9.0-blue)](https://www.python.org/downloads/release/python-390/)  
 [![Jupyter](https://img.shields.io/badge/jupyter-6.1.4-orange)](https://jupyter.org/)  
 [![Tensorflow](https://img.shields.io/badge/tensorflow-2.4.0-red)](https://www.tensorflow.org/)  
-[![Pandas](https://img.shields.io/badge/pandas-1.2.0-yellow)](https://pandas.pydata.org/)
+[![Pandas](https://img.shields.io/badge/pandas-1.2.0-yellow)](https://pandas.pydata.org/) -->
+
+<img align="left" alt="Python" width="50px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-plain.svg" />
+<img align="left" alt="Tensorflow" width="50px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" />        
+<img align="left" alt="Pandas" width="50px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original-wordmark.svg" />
+<img align="left" alt="Jupyter" width="50px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg"/>
+
+<br/>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
 ## Getting Started
+
 ### Prerequisites
 
 To install all the required libraries for this project, run the following command:
@@ -119,7 +127,21 @@ git clone https://github.com/AymaneElmahi/sd-hoc.git
 
 This project may be useful for anyone looking to implement the SD-HOC algorithm for occupancy estimation in their own applications. The algorithm's non-intrusive approach makes it suitable for various applications in facilities management and smart building systems.
 
-_For more details about the algorithm in itself, please refer to the [paper](https://github.com/cruiseresearchgroup/SD-HOC-Seasonal-Decomposition-Algorithm-for-Mining-Lagged-Time-Series/blob/master/paper/AusDM2017_IrvanAriefAng_(CCIS).pdf)\_
+_For more details about the algorithm in itself, please refer to the [paper](https://github.com/cruiseresearchgroup/SD-HOC-Seasonal-Decomposition-Algorithm-for-Mining-Lagged-Time-Series/blob/master/paper/AusDM2017_IrvanAriefAng_(CCIS).pdf)_
+
+To run the project, you can run the `main.py` file in the `src` directory, it requires three arguments:
+
+- `--JSON_FILES` : The path to the json_files that contains the people count data. (Take a look at the function create_final_df in the file `utils.py` to see how the json files should be structured)
+- `--CO2_DATA` : The path to the co2_files that contains the CO2 data. (Take a look at the function create_final_df in the file `utils.py` to see how the co2 files should be structured)
+- `--COMMAND` : The command to run, it can be either `train` or `run`.
+
+Here is an example of how to run the project:
+
+```sh
+python src/main.py --JSON_FILES ./data/json_files --CO2_DATA ./data/co2_files --COMMAND train
+```
+> `Note`: This section needs more explanation on what type of data is expected, the name of the columns, etc...  
+> -------> You can take a look at the `utils.py` file to see how the data should be structured.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

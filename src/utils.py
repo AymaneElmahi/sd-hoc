@@ -107,11 +107,12 @@ def create_final_df(json_files, df_co2):
     df_['time'] = df_['time'].apply(epoch_to_datetime, h_add=1)
     df_ = df_[['time', 'peoplecount_rgb']]
     df_ = df_[df_['peoplecount_rgb'] != -7]
+    df_co2 = df_co2.rename(columns={'EpochTime/UnixTime ( UTC )': 'epochtime'})
     # Multiply the EpochTime/UnixTime column to get epoch time in milliseconds and make an integer
-    df_co2['EpochTime/UnixTime ( UTC )'] = df_co2['EpochTime/UnixTime ( UTC )'].apply(
+    df_co2['epochtime'] = df_co2['epochtime'].apply(
         lambda x: int(x * 1000))
     # Transform epoch time to datetime, let the function know that the time is in GMT+1
-    df_co2['timestamp'] = df_co2['EpochTime/UnixTime ( UTC )'].apply(epoch_to_datetime, h_add=1)
+    df_co2['timestamp'] = df_co2['epochtime'].apply(epoch_to_datetime, h_add=1)
     # Keep only 'timestamp' and non-null 'co2-ndir' columns
     df_co2 = df_co2[['timestamp', 'co2-ndir']].dropna()
     df_co2['days'] = df_co2['timestamp'].dt.date  # Extract only the date part
